@@ -5,6 +5,7 @@ function ultimaChance(media){
 
 function calculaMedia(av1, av2, av3){
 	var media = (av1 + av2 + av3)/3;
+	media = parseInt(media*100)/100;	
 	alert("Sua média foi: "+media);
 	if (media < 4){
 		alert("Você está reprovado por média.");
