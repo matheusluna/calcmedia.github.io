@@ -21,4 +21,9 @@ input{
 }
 button{
   font-family: Open sans light;
+  background-color: cadetblue;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
 }
