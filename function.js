@@ -3,8 +3,8 @@ function ultimaChance(media){
 	return (notaFinal);
 }
 
-function calculaMedia(nota1, nota2, nota3){
-	var media = (nota1 + nota2 + nota3)/3;
+function calculaMedia(av1, av2, av3){
+	var media = (av1 + av2 + av3)/3;
 	alert("Sua média foi: "+media);
 	if (media < 4){
 		alert("Você está reprovado por média.");
@@ -14,12 +14,13 @@ function calculaMedia(nota1, nota2, nota3){
 	}
 	else{
 		 var notaFinal = ultimaChance(media);
-		 alert("Na final você irá precisar tirar no mínimo "+media+" para ser aprovado.");
+		 alert("Na final você irá precisar tirar no mínimo "+notaFinal+" para ser aprovado.");
 	}
 }		
 
-var nota1 = nota1.value;
-var nota2 = nota2.value;
-var nota3 = nota3.value;
-
-buttonMedia.onclick = calculaMedia(nota1, nota2, nota3);
+buttonMedia.onclick = function(){
+	var av1 = Number(nota1.value);
+	var av2 = Number(nota2.value);
+	var av3 = Number(nota3.value);
+	calculaMedia(av1, av2, av3);
+}
